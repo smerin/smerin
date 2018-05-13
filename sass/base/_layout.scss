@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: $white;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+.group {
+  @include clearfix;
+}
+.container {
+  position: relative;
+  max-width: $desktop;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  @include clearfix;
+
+  @include breakpoint(tablet) {
+    padding: 0 30px;
+  }
+}
+.no-padding-horizontal {
+  padding-left: 0;
+  padding-right: 0;
+}
+.no-padding-vert {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.no-padding-top {
+  padding-top: 0;
+}
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.constrain {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+
+  &--narrow {
+    max-width: 600px;
+  }
+}
+
+.line {
+  max-width: $desktop;
+  margin: 0 auto;
+  height: 1px;
+  border-bottom: 1px solid $flint;
+
+  &--980 {
+    max-width: 980px;
+  }
+}
+.color-divider {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  height: 8px;
+  background: url("../img/color_divider.png") no-repeat 50% top;
+  background-size: 100% auto;
+}
+
+.accessible-hide {
+  text-indent: -9999em;
+  outline: 0;
+  height: 0;
+}
+.centred {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}

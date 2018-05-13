@@ -1,0 +1,55 @@
+.contact-modal {
+    max-width: 560px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    &__title {
+        margin: 20px 0 40px;
+        font-size: 24px;
+    }
+
+    li {
+        background: #F5F5F5;
+        margin-bottom: 5px;
+        height: 100px;
+        padding: 35px 40px;
+        text-align: left;
+
+        @include breakpoint(mobileonly) {
+            text-align: center;
+            height: auto;
+        }
+
+        img {
+            position: relative;
+            top: 7px;
+            margin-right: 12px;
+        }
+
+        &:nth-child(even) {
+            background: #FAFAFA;
+        }
+
+        .button {
+            float: right;
+            width: 150px;
+            text-align: center;
+            margin: 0;
+
+            @include breakpoint(mobileonly) {
+                float: none;
+                margin-top: 20px;
+            }
+
+        }
+    }
+}
+
+.showreel-modal {
+    //width: 1200px;
+
+    iframe {
+        width: 100%;
+    }
+}

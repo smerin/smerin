@@ -1,0 +1,6 @@
+// Set page title and intro opacities to avoid initial flash before GSAP animation
+
+.page-title,
+.page-intro {
+    opacity: 0;
+}

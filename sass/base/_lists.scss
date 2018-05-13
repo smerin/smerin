@@ -1,0 +1,11 @@
+ul, ol {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.dotted-list {
+    li {
+        list-style: disc;
+        margin: 2px 0 3px 20px;
+    }
+}

@@ -1,0 +1,58 @@
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: $desktop) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: $laptop) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: $tablet) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: $mobile)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: $mobile)  { @content ; }
+  }
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder { color: $color; }
+    &:-moz-placeholder { color: $color; }
+    &::-moz-placeholder { color: $color; }
+    &:-ms-input-placeholder { color: $color; }
+}
+
+// Converts a px value to an em value, using the base font-size provided
+@function em($px, $baseFontSize: $global-font-size){
+    @return ($px / $baseFontSize) * 1em;
+}
+
+@mixin font-smoothing($value: on) {
+    @if ($value == on) {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+@function gcf($a, $b) {
+    @if (0 == $b) {
+        @return $a;
+    } @else {
+        @return gcf($b, $a % $b);
+    }
+}

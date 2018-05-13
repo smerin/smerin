@@ -1,0 +1,49 @@
+/*!
+Theme Name: smerin
+Theme URI: http://www.smerin.com/
+Author: George Smerin
+Author URI: http://www.smerin.com
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: smerin
+*/
+
+// Utilities
+@import "utilities/config";
+@import "utilities/mixins";
+@import "utilities/colours";
+@import "utilities/reset";
+
+// Base
+@import "base/accessibility";
+@import "base/grid";
+@import "base/layout";
+// @import "base/fonts";
+@import "base/typography";
+@import "base/icons";
+@import "base/links";
+@import "base/buttons";
+@import "base/lists";
+@import "base/images";
+@import "base/fields";
+@import "base/quotes";
+@import "base/tables";
+@import "base/flickity";
+@import "base/remodal";
+
+// Elements
+@import "elements/header";
+@import "elements/footer";
+@import "elements/navigation";
+@import "elements/page";
+@import "elements/sections";
+@import "elements/hero";
+@import "elements/home";
+@import "elements/services";
+@import "elements/team";
+@import "elements/showcase";
+@import "elements/modal";
+
+//@import 'elements/contact';

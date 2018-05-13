@@ -1,0 +1,19 @@
+a {
+  color: $charcoal;
+
+  &:visited {
+    color: $charcoal;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $charcoal;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}

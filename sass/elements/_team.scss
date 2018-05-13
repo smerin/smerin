@@ -1,0 +1,150 @@
+.team {
+    position: relative;
+    margin-top: 50px;
+
+    @include breakpoint(laptop) {
+        margin-top: 30px;
+    }
+    @include breakpoint(desktop) {
+        margin-top: 0;
+    }
+    &__strapline {
+        font-family: 'Bradley', 'RotisSansSerifforACCN', 'Helvetica Neue', Heletica, sans-serif;
+        font-size: 24px;
+
+        @include breakpoint(desktop) {
+            position: absolute;
+            left: -110px;
+            top: -35px;
+            transform: rotate(-7.5deg);
+
+        }
+    }
+
+    &__group {
+        @include breakpoint(desktop) {
+            position: relative;
+            top: -30px;
+        }
+    }
+    &__member {
+        @include clearfix;
+        position: relative;
+        display: block;
+        //max-width: 450px;
+        padding: 10px 0;
+        margin: 0 auto;
+        border-bottom: 1px dashed lighten($grey, 20%);
+
+        @include breakpoint(desktop) {
+            border: 0;
+            float: left;
+            padding: 110px 0 105px 5px;
+            width: percentage(1/7);
+        }
+
+        &:first-child {
+            border-top: 1px dashed lighten($grey, 20%);
+
+            @include breakpoint(desktop) {
+                border: 0;
+            }
+        }
+    }
+    &__image {
+        width: 85px;
+        float: left;
+        margin-right: 20px;
+        border: 3px solid white;
+
+        @include breakpoint(desktop) {
+            margin-right: 0;
+        }
+    }
+    &__info {
+        width: 220px;
+        float: left;
+        text-align: left;
+        padding: 5px 0 0;
+
+        @include breakpoint(desktop) {
+            width: 180px;
+            position: absolute;
+            top: 0;
+            left: 30px;
+
+            &:after {
+                content: "";
+                border-right: 1px dashed lighten($grey, 10%);
+                position: absolute;
+                left: -10px;
+                top: 6px;
+                height: 100px;
+            }
+        }
+
+        > * {
+            margin: 0;
+            padding: 0;
+            line-height: 18px;
+        }
+    }
+
+    &__member {
+        &:nth-child(odd) {
+            .team__info {
+                @include breakpoint(desktop) {
+                    bottom: 0;
+                    top: auto;
+                    left: auto;
+                    right: 40px;
+                    text-align: right;
+
+                    &:after {
+                        left: auto;
+                        right: -10px;
+                        top: auto;
+                        bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+    &__name,
+    &__role {
+        font-family: 'Bradley', 'RotisSansSerifforACCN', 'Helvetica Neue', Heletica, sans-serif;
+        font-size: 18px;
+
+    }
+    &__name {
+        margin-bottom: 5px;
+    }
+    &__role {
+        color: $picton;
+
+        .two &,
+        .six & {
+            color: $green;
+        }
+        .three &,
+        .four &,
+        .seven & {
+            color: $orange;
+        }
+        .five & {
+            color: $pink;
+        }
+    }
+    &__email {
+        display: inline-block;
+        font-size: 14px;
+        color: $grey;
+        border-bottom: 1px solid lighten($grey, 20%);
+        position: relative;
+        z-index: 10;
+
+        &:hover {
+            color: $charcoal;
+        }
+    }
+}

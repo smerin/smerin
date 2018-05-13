@@ -1,0 +1,31 @@
+.hero {
+    min-height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    color: $white;
+
+    @include breakpoint(tablet) {
+        min-height: 450px;
+    }
+
+    &--home {
+        min-height: 400px;
+        position: relative;
+        top: -82px;
+        margin-bottom: -82px;
+
+        > * {
+            opacity: 0;
+        }
+
+        @include breakpoint(tablet) {
+            min-height: 650px;
+        }
+    }
+
+}
+
+.parallax-mirror {
+    background-color: #646a6a;
+}

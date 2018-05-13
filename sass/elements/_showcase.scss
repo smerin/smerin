@@ -1,0 +1,94 @@
+.showcase {
+    font-family: 'Graphik', 'RotisSansSerifforACCN', 'Helvetica Neue', Heletica, sans-serif;
+    .hero {
+        min-height: 140px;
+        height: 30vw;
+    }
+    &__intro {
+        font-size: 20px;
+        line-height: 1.4em;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include breakpoint(tablet) {
+            font-size: 22px;
+        }
+
+        a {
+            color: $picton;
+
+            &:hover {
+                color: $sky;
+            }
+        }
+    }
+    .services__nav {
+        opacity: 1;
+
+        li {
+            a:after {
+                background: $sky;
+                bottom: -14px;
+            }
+        }
+    }
+
+    &__content {
+        background: #f2f2f2;
+        padding: 20px;
+
+        @include breakpoint(phablet) {
+            padding: 30px;
+        }
+        @include breakpoint(laptop) {
+            padding: 60px;
+        }
+    }
+
+    &__item {
+        margin: 0 0 30px;
+        text-align: left;
+
+        @include breakpoint(laptop) {
+            margin: 0 0 50px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        h3 {
+            font-size: 24px;
+            margin: 10px 0 20px;
+
+            @include breakpoint(laptop) {
+                margin-top: 0;
+            }
+        }
+        h4 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        a {
+            color: $picton;
+
+            &:hover {
+                color: $sky;
+            }
+        }
+
+    }
+    &__thumb {
+        border: 4px solid $white;
+    }
+    &__text {
+        p {
+            font-size: 14px;
+            line-height: 1.3em;
+        }
+    }
+    &__instructions {
+        font-size: 14px;
+        margin-top: -20px;
+    }
+}

@@ -1,0 +1,268 @@
+.services {
+
+    min-height: 550px;
+
+    &__header {
+        min-height: 300px;
+    }
+
+    .page-intro {
+        font-size: 18px;
+        line-height: 1.4em;
+
+        @include breakpoint(phablet) {
+            font-size: 24px;
+        }
+    }
+
+    &--creative {
+        .constrain--narrow {
+            max-width: 650px;
+        }
+    }
+    &--presentations {
+        .constrain--narrow {
+            max-width: 700px;
+        }
+    }
+
+    &__carousel {
+        opacity: 0; // Hide initial flash before GSAP kicks in
+        margin: 0;
+        padding-bottom: 40px;
+
+        @include breakpoint(desktop) {
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-top: 10px;
+
+            @include breakpoint(laptop) {
+                margin-top: 70px;
+            }
+        }
+
+        .col-33 {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+
+            p {
+                max-width: 550px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @include breakpoint(laptop) {
+                left: -40px;
+                text-align: left;
+            }
+        }
+    }
+
+    &__fader {
+        height: 66vw;
+
+        @include breakpoint(tablet) {
+            height: auto;
+        }
+
+        .flickity-slider {
+            transform: none !important;
+
+            img {
+                left: 0 !important;
+                opacity: 0;
+                transition: opacity 0.8s ease;
+            }
+            img.is-selected {
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+    }
+
+    &--video {
+
+        .services__carousel {
+            h2 {
+                color: $video;
+            }
+            .button {
+                background-color: $video;
+                border-color: $video;
+                color: $white;
+
+                &:hover {
+                    background-color: $charcoal;
+                    border-color: $charcoal;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        opacity: 0; // Hide initial flash before GSAP kicks in
+        margin: 20px 0 20px;
+        border-top: 1px solid $silver;
+        border-bottom: 1px solid $silver;
+
+        @include breakpoint(phablet) {
+            margin-top: 40px;
+        }
+
+        li {
+            display: inline-block;
+            margin: 10px 25px;
+
+            @include breakpoint(mobileonly) {
+                font-size: 12px;
+                margin: 5px 10px;
+            }
+
+            a {
+                position: relative;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -13px;
+                    left: -5%;
+                    width: 110%;
+                    height: 3px;
+                    background: $charcoal;
+                    transform: scaleX(0);
+                    transform-origin: 0 50%;
+                    transition: all 0.5s ease-out;
+
+                    @include breakpoint(mobileonly) {
+                        bottom: -10px;
+                    }
+
+                    .services--digital & {
+                        background: $digital;
+                    }
+                    .services--presentations & {
+                        background: $presentations;
+                    }
+                    .services--creative & {
+                        background: $creative;
+                    }
+                    .services--video & {
+                        background: $video;
+                    }
+                }
+            }
+
+            &.active {
+                a {
+                    color: $charcoal;
+
+                    &:after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+        a {
+            color: $grey;
+            //border-bottom: 2px solid $sky;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $charcoal;
+                border-color: rgba($charcoal, 0.5);
+            }
+        }
+    }
+}
+
+.service-nav {
+    ul {
+
+    }
+    li {
+        float: left;
+        width: 25%;
+
+        @include breakpoint(mobileonly) {
+            font-size: 12px;
+        }
+    }
+    a {
+        display: block;
+        position: relative;
+        background: $charcoal;
+        color: $white;
+        text-align: center;
+        padding: 10px;
+        transition: all 0.3s ease;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            margin-left: -10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: $charcoal transparent transparent transparent;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        &.active {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &.service--digital {
+            background-color: $digital;
+
+            &:after {
+                border-color: $digital transparent transparent transparent;
+            }
+        }
+        &.service--presentations {
+            background-color: $presentations;
+
+            &:after {
+                border-color: $presentations transparent transparent transparent;
+            }
+        }
+        &.service--creative {
+            background-color: $creative;
+
+            &:after {
+                border-color: $creative transparent transparent transparent;
+            }
+        }
+        &.service--video {
+            background-color: $video;
+
+            &:after {
+                border-color: $video transparent transparent transparent;
+            }
+        }
+        &:hover {
+            background-color: $charcoal;
+
+            &:after {
+                border-color: $charcoal transparent transparent transparent;
+            }
+        }
+    }
+}

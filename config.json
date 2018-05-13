@@ -1,0 +1,14 @@
+{
+  "author": "George Smerin",
+
+  "env": {
+    "build": "./",
+    "images_path": "./images/"
+  },
+
+  "js_files": [
+    "./js/navigation.js",
+    "./js/skip-link-focus-fix.js",
+    "./js/script.js"
+  ]
+}

@@ -1,0 +1,114 @@
+.section {
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        text-align: left;
+
+        &.centred {
+            text-align: center;
+        }
+    }
+
+    &--color {
+        color: $white;
+
+        .button {
+            color: $white;
+            border-color: $white;
+            &:hover {
+                border-color: $charcoal;
+            }
+        }
+
+        .about & {
+            background: $neptune;
+        }
+        .services--digital & {
+            background: $digital;
+        }
+        .services--presentations & {
+            background: $presentations;
+        }
+        .services--creative & {
+            background: $creative;
+        }
+        .services--video & {
+            background: $video;
+        }
+    }
+    &--lighter {
+        background: #F7F7F7;
+    }
+    &--light {
+        background: #F2F2F2;
+    }
+    &--silver {
+        background: $silver;
+    }
+
+    &--presentations {
+        background: $presentations;
+
+        .section__image {
+            @include breakpoint(desktop) {
+                position: relative;
+                right: 120px;
+            }
+        }
+    }
+    &--team {
+        background: #f2f2f2;
+
+        .section__text {
+            max-width: 320px;
+        }
+        .button {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    &--together {
+
+        h2 {
+            margin-top: 0;
+        }
+        .section__text {
+            font-size: 24px;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__image {
+        display: none;
+
+        @include breakpoint(tablet) {
+            display: block;
+        }
+    }
+    &__image-bottom {
+        display: block;
+        position: relative;
+        bottom: -50px;
+    }
+
+    &__text {
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include breakpoint(tablet) {
+            max-width: auto;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+    }
+}
