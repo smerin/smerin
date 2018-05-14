@@ -315,7 +315,8 @@ body,
 button,
 input,
 textarea {
-  font-family: 'RotisSansSerifforACCN', 'Helvetica Neue', Heletica, sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.4em;
   color: #333333;
@@ -341,24 +342,24 @@ b,
 strong {
   font-weight: 700; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400; }
-
 h1 {
-  font-size: 50px;
+  font-size: 3em;
+  font-weight: 100;
+  letter-spacing: -0.05em;
   line-height: 1.2em;
   margin: 40px 0 20px; }
   @media (min-width: 780px) {
     h1 {
-      font-size: 80px; } }
+      font-size: 6em; } }
 
 h2 {
   font-size: 40px;
+  font-weight: 300;
   line-height: 1.2em;
   margin: 30px 0 20px; }
 
 h3 {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.2em;
   margin: 20px 0; }
 
@@ -382,7 +383,8 @@ h4 {
   padding-bottom: 5px; }
 
 a {
-  color: #333333; }
+  color: #333333;
+  text-decoration: none; }
   a:visited {
     color: #333333; }
   a:hover, a:focus, a:active {
@@ -856,6 +858,7 @@ html.remodal-is-locked {
             justify-content: flex-end; }
 
 .site-footer {
+  padding: 40px 0;
   background: #333333;
   color: #FFFFFF; }
 
@@ -866,7 +869,7 @@ html.remodal-is-locked {
   padding-left: 0; }
   .main-navigation ul a {
     font-size: 1.25em;
-    font-weight: 700;
+    font-weight: 300;
     padding: 10px 20px; }
   .main-navigation ul ul {
     -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -1021,8 +1024,12 @@ html.remodal-is-locked {
   background-color: #646a6a; }
 
 .home__hero {
-  background: #ddd;
-  height: 500px; }
+  background: #1eb4c2;
+  color: white;
+  height: 580px; }
+
+.featured-posts {
+  padding: 40px 0; }
 
 .services {
   min-height: 550px; }

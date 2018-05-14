@@ -2,72 +2,80 @@ body,
 button,
 input,
 textarea {
-    font-family: 'RotisSansSerifforACCN', 'Helvetica Neue', Heletica, sans-serif;
-    font-size: 16px;
-    line-height: 1.4em;
-    color: $charcoal;
-    @include font-smoothing;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: $charcoal;
+  @include font-smoothing;
 
-    @include breakpoint(tablet) {
-        font-size: 18px;
-    }
+  @include breakpoint(tablet) {
+    font-size: 18px;
+  }
 }
 p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    &.large {
-        font-size: 22px;
-        line-height: 1.2em;
+  &.large {
+    font-size: 22px;
+    line-height: 1.2em;
 
-        @include breakpoint(tablet) {
-            font-size: 30px;
-        }
+    @include breakpoint(tablet) {
+      font-size: 30px;
     }
+  }
 }
 b,
 strong {
-    font-weight: 700;
+  font-weight: 700;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 }
 h1 {
-    font-size: 50px;
-    line-height: 1.2em;
-    margin: 40px 0 20px;
+  font-size: 3em;
+  font-weight: 100;
+  letter-spacing: -0.05em;
+  line-height: 1.2em;
+  margin: 40px 0 20px;
 
-    @include breakpoint(tablet) {
-        font-size: 80px;
-    }
+  @include breakpoint(tablet) {
+    font-size: 6em;
+  }
 }
 
 h2 {
-    font-size: 40px;
-    line-height: 1.2em;
-    margin: 30px 0 20px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 30px 0 20px;
 }
 h3 {
-    font-size: 30px;
-    line-height: 1.2em;
-    margin: 20px 0;
+  font-size: 24px;
+  line-height: 1.2em;
+  margin: 20px 0;
 }
 h4 {
-    font-size: 18px;
-    line-height: 1.2em;
-    margin: 10px 0;
+  font-size: 18px;
+  line-height: 1.2em;
+  margin: 10px 0;
 }
 .text-giant {
-    font-size: 80px;
+  font-size: 80px;
 }
 .text-large {
-    font-size: 60px;
+  font-size: 60px;
 }
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .underline {
-    border-bottom: 1px solid $white;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+  border-bottom: 1px solid $white;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
 }
